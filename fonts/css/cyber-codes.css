@@ -1,0 +1,4 @@
+
+.p-award:before { content: '\e802'; } /* '' */
+.p-clock:before { content: '\e803'; } /* '' */
+.p-gamepad:before { content: '\f11b'; } /* '' */
