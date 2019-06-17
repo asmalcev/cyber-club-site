@@ -1,5 +1,84 @@
 @media (max-width: 1000px) {
   header {
-    grid-template-columns: 20% 80%;
+    height: 100vh;
+    width: 80%;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(15%, 20%) minmax(40px, 20%);
+    transform: translateX(-101%);
+    background: -webkit-linear-gradient(90deg, #252525, #111);
+  }
+  .logo {
+    background-color: #000;
+    border-bottom: 5px #1cff00 solid;
+  }
+  .logo img {
+    position: relative;
+    margin-left: 20%;
+    width: 100px;
+    height: auto;
+  }
+  .menu {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .menu-element {
+    text-align: left;
+  }
+  .menu-element a {
+    padding: 4px 20px;
+    font-size: 20px;
+  }
+  header .btn {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -60px;
+    width: 60px;
+    height: 50px;
+  }
+  header .btn span {
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 2px;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    top: 10px;
+    right: 10px;
+  }
+  header .btn span:nth-of-type(2) {
+    top: 19px;
+  }
+  header .btn span:nth-of-type(3) {
+    top: 28px;
+  }
+  header .btn.active span:nth-of-type(1) {
+    width: 15px;
+  }
+  header .btn.active span:nth-of-type(3) {
+    width: 20px;
+  }
+  .price-list {
+    flex-direction: column;
+  }
+  .achievements {
+    flex-direction: column;
+  }
+  .achievement {
+    border: none;
+    border-bottom: 6px #111 solid;
+    width: 100%;
+    height: 130px;
+  }
+  .achievement p {
+    opacity: 1;
+    font-size: 17px;
+  }
+  .achievement i  {
+    transform: translate(-50%, -160%);
   }
 }
