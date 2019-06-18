@@ -102,6 +102,38 @@ header .btn {
   -ms-align-items: center;
   align-items: center;
 }
+.welcome-block h2 {
+  position: relative;
+}
+.welcome-block h2::after, .welcome-block h2::before {
+  content: '';
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  border: 2px #aaa6 solid;
+  border-right-style: dashed;
+  border-left-style: dashed;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  animation: spining1 6s infinite linear;
+}
+.welcome-block h2::before {
+  width: 360px;
+  height: 360px;
+  animation: spining2 6s infinite linear;
+}
+@keyframes spining1 {
+  from { transform: translate(-50%, -50%) rotate(0deg);}
+  to { transform: translate(-50%, -50%) rotate(360deg);}
+}
+@keyframes spining2 {
+  from { transform: translate(-50%, -50%) rotate(0deg);}
+  to { transform: translate(-50%, -50%) rotate(-360deg);}
+}
 /* .price-list {
   display: -webkit-flex;
   display: -ms-flex;
