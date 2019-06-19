@@ -22,19 +22,7 @@ a {
   margin: 60px 0;
   font-size: 32px;
   position: relative;
-  /* overflow: hidden; */
 }
-/* .section-name::after, .section-name::before {
-  content: '';
-  position: absolute;
-  bottom: 50%;
-  left: 50%;
-  height: 80px;
-  transform: translate(-50%, 50%) rotate(45deg);
-  border: 4px #1cff0040 solid;
-  width: 80px;
-  z-index: -1;
-} */
 .section-name::before {
   content: '';
   position: absolute;
@@ -101,14 +89,15 @@ header .btn {
   justify-content: center;
   -ms-align-items: center;
   align-items: center;
+  overflow: hidden;
 }
 .welcome-block h2 {
   position: relative;
 }
 .welcome-block h2::after, .welcome-block h2::before {
   content: '';
-  width: 240px;
-  height: 240px;
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
   border: 2px #aaa6 solid;
   border-right-style: dashed;
@@ -122,38 +111,10 @@ header .btn {
   animation: spining1 6s infinite linear;
 }
 .welcome-block h2::before {
-  width: 360px;
-  height: 360px;
+  width: 320px;
+  height: 320px;
   animation: spining2 6s infinite linear;
 }
-@keyframes spining1 {
-  from { transform: translate(-50%, -50%) rotate(0deg);}
-  to { transform: translate(-50%, -50%) rotate(360deg);}
-}
-@keyframes spining2 {
-  from { transform: translate(-50%, -50%) rotate(0deg);}
-  to { transform: translate(-50%, -50%) rotate(-360deg);}
-}
-/* .price-list {
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
-  justify-content: space-between;
-  -ms-align-items: center;
-  align-items: center;
-  max-width: 800px;
-  width: 80%;
-  margin: 0 auto;
-}
-.price-block {
-  margin: 30px;
-  background-color: #3e3e3e;
-  width: 300px;
-  height: 260px;
-  border-radius: 20px;
-  padding: 20px;
-  color: #fefefe;
-} */
 .price-list {
   width: 100%;
   padding: 4vh 0;
@@ -175,15 +136,13 @@ header .btn {
   text-align: left;
 }
 .price-block hr {
-  width: 80%;
+  width: 70%;
   margin: 4px 0;
-  background-color: #1cff00;
-  /* border: 1px #1cff00 solid; */
 }
 .price-block .container {
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flex;
+  display: inline-flex;
   justify-content: space-around;
   -ms-align-items: center;
   align-items: center;
@@ -191,6 +150,13 @@ header .btn {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  width: 70%;
+  float: left;
+}
+.price-block .information {
+  width: 25%;
+  display: inline-block;
+  float: right;
 }
 .price {
   padding: 8px;
@@ -204,6 +170,15 @@ header .btn {
 .price p:nth-of-type(2) {
   font-size: 30px;
   color: #108f00;
+}
+.price-block > h4 {
+  text-align: left;
+  margin-top: 10px;
+  clear: both;
+}
+.price-block .information > h4 {
+  text-align: left;
+  margin-bottom: 5px;
 }
 .achievements {
   display: -webkit-flex;
