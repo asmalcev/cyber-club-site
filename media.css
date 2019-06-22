@@ -99,13 +99,11 @@
   .price-block .media-container .information {
     display: block;
   }
-  .map-block {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    padding: 0;
+  .contact-block {
+    grid-template-columns: 1fr;
+    padding: 10px 5%;
   }
-  .map-info p {
-    font-size: 16px;
+  .contact {
+    grid-template-columns: 20% 80%;
   }
 }

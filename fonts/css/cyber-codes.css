@@ -1,4 +1,8 @@
 
+.p-phone:before { content: '\e800'; } /* '' */
+.p-home:before { content: '\e801'; } /* '' */
 .p-award:before { content: '\e802'; } /* '' */
 .p-clock:before { content: '\e803'; } /* '' */
+.p-mail-alt:before { content: '\f0e0'; } /* '' */
 .p-gamepad:before { content: '\f11b'; } /* '' */
+.p-car:before { content: '\f1b9'; } /* '' */
