@@ -62,9 +62,6 @@
   header .btn.active span:nth-of-type(3) {
     width: 20px;
   }
-  .price-list {
-    flex-direction: column;
-  }
   .achievements {
     flex-direction: column;
   }
@@ -80,5 +77,35 @@
   }
   .achievement i  {
     transform: translate(-50%, -160%);
+  }
+  .price-list {
+    flex-direction: column;
+  }
+  .price-block {
+    width: 100%;
+  }
+  .price-block .container, .price-block .information {
+    float: none;
+    width: 100%;
+  }
+  .price {
+    width: 45%;
+    margin: 2px;
+  }
+  .price-block .information {
+    padding-left: 30px;
+    display: none;
+  }
+  .price-block .media-container .information {
+    display: block;
+  }
+  .map-block {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 0;
+  }
+  .map-info p {
+    font-size: 16px;
   }
 }
