@@ -19,3 +19,15 @@ menu
       body.style['overflow'] = 'hidden'
     }
   })
+
+let achievements = {
+  activeIndex: 0,
+  html: document.querySelectorAll('.achievement')
+}
+achievements.html[achievements.activeIndex].classList.add('active')
+if (window.innerWidth > 1000)
+  setInterval(_ => {
+    achievements.html[achievements.activeIndex].classList.remove('active')
+    achievements.activeIndex = (achievements.activeIndex + 1) % achievements.html.length
+    achievements.html[achievements.activeIndex].classList.add('active')
+  }, 2000)

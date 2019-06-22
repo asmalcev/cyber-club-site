@@ -1,8 +1,14 @@
 
 .p-phone:before { content: '\e800'; } /* '' */
 .p-home:before { content: '\e801'; } /* '' */
-.p-award:before { content: '\e802'; } /* '' */
+.p-beer:before { content: '\e802'; } /* '' */
 .p-clock:before { content: '\e803'; } /* '' */
+.p-restaurant:before { content: '\e832'; } /* '' */
 .p-mail-alt:before { content: '\f0e0'; } /* '' */
+.p-desktop:before { content: '\f108'; } /* '' */
 .p-gamepad:before { content: '\f11b'; } /* '' */
+.p-puzzle:before { content: '\f12e'; } /* '' */
+.p-vkontakte:before { content: '\f189'; } /* '' */
 .p-car:before { content: '\f1b9'; } /* '' */
+.p-twitch:before { content: '\f1e8'; } /* '' */
+.p-instagram:before { content: '\f31e'; } /* '' */
