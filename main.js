@@ -22,15 +22,25 @@ menu
 
 let achievements = {
   activeIndex: 0,
-  html: document.querySelectorAll('.achievement')
+  html: document.querySelectorAll('.achievement'),
+  body: document.querySelector('.achievements'),
+  isOver: false
 }
-achievements.html[achievements.activeIndex].classList.add('active')
+if (!achievements.isOver) achievements.html[achievements.activeIndex].classList.add('active')
 if (window.innerWidth > 1000)
   setInterval(_ => {
-    achievements.html[achievements.activeIndex].classList.remove('active')
-    achievements.activeIndex = (achievements.activeIndex + 1) % achievements.html.length
-    achievements.html[achievements.activeIndex].classList.add('active')
+    if (!achievements.isOver) {
+      achievements.html[achievements.activeIndex].classList.remove('active')
+      achievements.activeIndex = (achievements.activeIndex + 1) % achievements.html.length
+      achievements.html[achievements.activeIndex].classList.add('active')
+    }
   }, 2000)
+
+achievements.body.addEventListener('mouseover', _ => {achievements.isOver = true})
+achievements.body.addEventListener('mouseout', _ => {
+  achievements.isOver = false
+  achievements.html.forEach(ach => {ach.classList.remove('active')})
+})
 
 ymaps.ready(function () {
     let myMap = new ymaps.Map('map', {

@@ -215,7 +215,7 @@ header .btn {
 .achievement:last-child {
   border: none;
 }
-.achievement.active {
+.achievement.active, .achievement:hover {
   flex-grow: 2;
 }
 .achievement p {
@@ -227,8 +227,9 @@ header .btn {
   -o-transition: .6s;
   transition: .6s;
 }
-.achievement.active p {
+.achievement.active p, .achievement:hover p {
   opacity: 1;
+  color: #1cff00;
 }
 .achievement i {
   position: absolute;
@@ -240,9 +241,10 @@ header .btn {
   top: 50%;
   transform: translate(-50%, -50%);
 }
-.achievement.active i {
+.achievement.active i, .achievement:hover i {
   font-size: 30px;
   transform: translate(-50%, -120%);
+  color: #1cff00;
 }
 footer {
   background-color: #212121;
@@ -291,11 +293,11 @@ footer {
   width: 100%;
 }
 .ymaps-2-1-74-ground-pane {
-  filter: brightness(.9) invert(100%) grayscale(.5) hue-rotate(280deg);
-  -ms-filter: brightness(.9) invert(100%) grayscale(.5) hue-rotate(280deg);
-  -webkit-filter: brightness(.9) invert(100%) grayscale(.5) hue-rotate(280deg);
-  -moz-filter: brightness(.9) invert(100%) grayscale(.5) hue-rotate(280deg);
-  -o-filter: brightness(.9) invert(100%) grayscale(.5) hue-rotate(280deg);
+  filter: brightness(.9) invert(100%) grayscale(.3) hue-rotate(260deg);
+  -ms-filter: brightness(.9) invert(100%) grayscale(.3) hue-rotate(260deg);
+  -webkit-filter: brightness(.9) invert(100%) grayscale(.3) hue-rotate(260deg);
+  -moz-filter: brightness(.9) invert(100%) grayscale(.3) hue-rotate(260deg);
+  -o-filter: brightness(.9) invert(100%) grayscale(.3) hue-rotate(260deg);
 }
 #map {
   width: 100%;
