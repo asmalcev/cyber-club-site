@@ -31,3 +31,24 @@ if (window.innerWidth > 1000)
     achievements.activeIndex = (achievements.activeIndex + 1) % achievements.html.length
     achievements.html[achievements.activeIndex].classList.add('active')
   }, 2000)
+ymaps.ready(function () {
+    let myMap = new ymaps.Map('map', {
+          center: [56.14034789, 47.26792762],
+          zoom: 17
+        }),
+        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+          '<div id="iconContent">$[properties.iconContent]</div>'
+        ),
+        myPlacemarkWithContent = new ymaps.Placemark([56.14034789, 47.26792762], {
+          hintContent: 'г.Чебоксары ул.Калинина дом 91к1',
+          iconContent: 'Cyber city' }, {
+          iconLayout: 'default#imageWithContent',
+          iconImageHref: 'images/placemark.png',
+          iconImageSize: [60, 60],
+          iconImageOffset: [-30, -30],
+          iconContentOffset: [55, 15],
+          iconContentLayout: MyIconContentLayout
+        })
+    myMap.geoObjects.add(myPlacemarkWithContent)
+    myMap.controls.add('zoomControl');
+})
