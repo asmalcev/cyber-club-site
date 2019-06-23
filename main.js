@@ -31,10 +31,12 @@ if (window.innerWidth > 1000)
     achievements.activeIndex = (achievements.activeIndex + 1) % achievements.html.length
     achievements.html[achievements.activeIndex].classList.add('active')
   }, 2000)
+
 ymaps.ready(function () {
     let myMap = new ymaps.Map('map', {
           center: [56.14034789, 47.26792762],
-          zoom: 17
+          zoom: 17,
+          controls: ['zoomControl', 'fullscreenControl']
         }),
         MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
           '<div id="iconContent">$[properties.iconContent]</div>'
@@ -50,5 +52,4 @@ ymaps.ready(function () {
           iconContentLayout: MyIconContentLayout
         })
     myMap.geoObjects.add(myPlacemarkWithContent)
-    myMap.controls.add('zoomControl');
 })
