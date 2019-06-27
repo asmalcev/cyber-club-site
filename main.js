@@ -26,7 +26,7 @@ let achievements = {
   body: document.querySelector('.achievements'),
   isOver: false
 }
-if (!achievements.isOver) achievements.html[achievements.activeIndex].classList.add('active')
+if (!achievements.isOver && window.innerWidth > 1000) achievements.html[achievements.activeIndex].classList.add('active')
 if (window.innerWidth > 1000)
   setInterval(_ => {
     if (!achievements.isOver) {

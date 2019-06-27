@@ -4,7 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Source Sans Pro', sans-serif;
-  color: #d1d1d1;
+  color: #d6d6d6;
 }
 body {
   background-color: #2a2a2a;
@@ -16,10 +16,6 @@ h1,h2,h3,h4,h5,h6 {
 }
 a {
   text-decoration: none;
-  color: #fff;
-}
-p {
-  color: #d6d6d6;
 }
 .section-name {
   margin-bottom: 60px;
@@ -47,7 +43,7 @@ header {
   height: 64px;
   background: #111;
   display: grid;
-  grid-template-columns: 30% 70%;
+  grid-template-columns: 20% 80%;
   z-index: 999;
   -webkit-transition: .3s;
   -o-transition: .3s;
@@ -56,10 +52,20 @@ header {
 header .btn {
   display: none;
 }
+.logo {
+  position: relative;
+}
 .logo img {
   height: 60px;
   position: relative;
   margin-left: 20%;
+}
+.logo .adress {
+  position: absolute;
+  top: 0;
+  left: calc(20% + 70px);
+  font-size: 12px;
+  line-height: 150%;
 }
 .menu {
   display: -webkit-flex;
@@ -68,7 +74,6 @@ header .btn {
 }
 .menu-element {
   width: 100%;
-  color: #fff;
   line-height: 60px;
   text-align: center;
   -webkit-transition: .3s;
@@ -77,7 +82,9 @@ header .btn {
 }
 .menu-element:hover {
   background-color: rgba(255, 255, 255, 0.2);
-  text-shadow: 0 0 10px #14ff00;
+}
+.menu-element:nth-of-type(6):hover {
+  background: none;
 }
 .menu-element a {
   display: block;
@@ -96,9 +103,18 @@ header .btn {
   -ms-align-items: center;
   align-items: center;
   overflow: hidden;
+  padding: 20px;
+  text-align: left;
+}
+.welcome-block .wrapper {
+  width: 508px;
+  font-size: 18px;
+  word-spacing: 3px;
 }
 .welcome-block h2 {
   position: relative;
+  font-size: 100px;
+  margin-bottom: 15px;
 }
 .welcome-block h2::after, .welcome-block h2::before {
   content: '';
@@ -135,8 +151,8 @@ header .btn {
 .price-block {
   background-color: #00000070;
   width: 80%;
-  max-width: 800px;
-  padding: 20px;
+  max-width: 900px;
+  padding: 20px 40px;
 }
 .price-block h3 {
   text-align: left;
@@ -149,7 +165,7 @@ header .btn {
   display: -webkit-inline-flex;
   display: -ms-inline-flex;
   display: inline-flex;
-  justify-content: space-around;
+  justify-content: space-between;
   -ms-align-items: center;
   align-items: center;
   margin: 20px 0;
@@ -157,30 +173,30 @@ header .btn {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   width: 70%;
-  float: left;
 }
 .price-block .information {
-  width: 25%;
   display: inline-block;
   float: right;
+  width: 25%;
 }
 .price {
-  padding: 8px;
+  padding: 8px 10px;
   background-color: #00000070;
   text-align: center;
   font-weight: bold;
+  flex: auto;
+  margin: 2px;
 }
 .price p {
   font-size: 22px;
 }
 .price p:nth-of-type(2) {
   font-size: 30px;
-  color: #108f00;
+  color: #1cff00a0;
 }
 .price-block > h4 {
   text-align: left;
   margin-top: 10px;
-  clear: both;
 }
 .price-block .information > h4 {
   text-align: left;
@@ -205,7 +221,6 @@ header .btn {
   -o-transition: .6s;
   transition: .6s;
   text-align: center;
-  color: #fff;
   flex-grow: 1;
   height: 120px;
   border-right: 6px #111 solid;
@@ -229,7 +244,7 @@ header .btn {
 }
 .achievement.active p, .achievement:hover p {
   opacity: 1;
-  color: #1cff00;
+  color: #1cff00a0;
 }
 .achievement i {
   position: absolute;
@@ -244,7 +259,7 @@ header .btn {
 .achievement.active i, .achievement:hover i {
   font-size: 30px;
   transform: translate(-50%, -120%);
-  color: #1cff00;
+  color: #1cff00a0;
 }
 footer {
   background-color: #212121;
@@ -321,12 +336,22 @@ footer {
   background: -moz-linear-gradient(-45deg, #111, #222);
   background: -o-linear-gradient(-45deg, #111, #222);
 }
-.sky {
+.grd {
   background-image: linear-gradient(-45deg, #111b, #222b), url('images/grd.jpg');
   background-image: -webkit-linear-gradient(-45deg, #111b, #222b), url('images/grd.jpg');
   background-image: -ms-linear-gradient(-45deg, #111b, #222b), url('images/grd.jpg');
   background-image: -o-linear-gradient(-45deg, #111b, #222b), url('images/grd.jpg');
   background-image: -moz-linear-gradient(-45deg, #111b, #222b), url('images/grd.jpg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.bdr {
+  background-image: linear-gradient(-45deg, #111b, #222b), url('images/bdr.jpg');
+  background-image: -webkit-linear-gradient(-45deg, #111b, #222b), url('images/bdr.jpg');
+  background-image: -ms-linear-gradient(-45deg, #111b, #222b), url('images/bdr.jpg');
+  background-image: -o-linear-gradient(-45deg, #111b, #222b), url('images/bdr.jpg');
+  background-image: -moz-linear-gradient(-45deg, #111b, #222b), url('images/bdr.jpg');
   background-position: center;
   background-size: cover;
   background-attachment: fixed;

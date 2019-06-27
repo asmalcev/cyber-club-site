@@ -62,6 +62,12 @@
   header .btn.active span:nth-of-type(3) {
     width: 20px;
   }
+  .welcome-block h2 {
+    font-size: 17vw;
+  }
+  .welcome-block p {
+    margin-top: 10vh;
+  }
   .achievements {
     flex-direction: column;
   }
@@ -81,12 +87,17 @@
   .price-list {
     flex-direction: column;
   }
+  .price-list:nth-of-type(2) {
+    padding-bottom: 0;
+  }
   .price-block {
     width: 100%;
+    padding: 20px;
   }
   .price-block .container, .price-block .information {
     float: none;
     width: 100%;
+    font-size: 18px;
   }
   .price {
     width: 45%;
