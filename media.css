@@ -105,4 +105,25 @@
   .contact {
     grid-template-columns: 20% 80%;
   }
+  .vip-hall, .hall {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: column;
+  }
+  .hall img {
+    display: none;
+  }
+  .description {
+    margin-left: 24px;
+  }
+  .description p {
+    font-size: 24px;
+  }
+  .description p i {
+    top: 0;
+  }
+  .description ul {
+    font-size: 18px;
+  }
 }
