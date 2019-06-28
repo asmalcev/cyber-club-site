@@ -346,12 +346,18 @@ footer {
   padding-left: 10px;
   position: relative;
 }
-.description p i {
+.description p i, .description p img {
   font-size: 28px;
   position: absolute;
   left: -36px;
   top: -4px;
   color: #1cff00a0;
+}
+.description p img {
+  width: 42px;
+  height: auto;
+  top: -8px;
+  opacity: .7;
 }
 .description ul {
   margin: 8px 0;
