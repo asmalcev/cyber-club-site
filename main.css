@@ -110,32 +110,12 @@ header .btn {
   width: 508px;
   font-size: 18px;
   word-spacing: 3px;
+  z-index: 1;
 }
 .welcome-block h2 {
   position: relative;
   font-size: 100px;
   margin-bottom: 15px;
-}
-.welcome-block h2::after, .welcome-block h2::before {
-  content: '';
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  border: 2px #aaa6 solid;
-  border-right-style: dashed;
-  border-left-style: dashed;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  animation: spining1 6s infinite linear;
-}
-.welcome-block h2::before {
-  width: 320px;
-  height: 320px;
-  animation: spining2 6s infinite linear;
 }
 .price-list {
   width: 100%;
@@ -172,12 +152,7 @@ header .btn {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  width: 70%;
-}
-.price-block .information {
-  display: inline-block;
-  float: right;
-  width: 25%;
+  width: 100%;
 }
 .price {
   padding: 8px 10px;
@@ -197,13 +172,6 @@ header .btn {
 .price-block > h4 {
   text-align: left;
   margin-top: 10px;
-}
-.price-block .information > h4 {
-  text-align: left;
-  margin-bottom: 5px;
-}
-.media-container .information {
-  display: none;
 }
 .achievements {
   display: -webkit-flex;
@@ -337,22 +305,67 @@ footer {
   background: -o-linear-gradient(-45deg, #111, #222);
 }
 .grd {
-  background-image: linear-gradient(-45deg, #111b, #222b), url('images/grd.jpg');
-  background-image: -webkit-linear-gradient(-45deg, #111b, #222b), url('images/grd.jpg');
-  background-image: -ms-linear-gradient(-45deg, #111b, #222b), url('images/grd.jpg');
-  background-image: -o-linear-gradient(-45deg, #111b, #222b), url('images/grd.jpg');
-  background-image: -moz-linear-gradient(-45deg, #111b, #222b), url('images/grd.jpg');
+  background-image: linear-gradient(-45deg, #000c, #111c), url('images/grd.jpg');
+  background-image: -webkit-linear-gradient(-45deg, #000c, #111c), url('images/grd.jpg');
+  background-image: -ms-linear-gradient(-45deg, #000c, #111c), url('images/grd.jpg');
+  background-image: -o-linear-gradient(-45deg, #000c, #111c), url('images/grd.jpg');
+  background-image: -moz-linear-gradient(-45deg, #000c, #111c), url('images/grd.jpg');
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
 }
 .bdr {
-  background-image: linear-gradient(-45deg, #111b, #222b), url('images/bdr.jpg');
-  background-image: -webkit-linear-gradient(-45deg, #111b, #222b), url('images/bdr.jpg');
-  background-image: -ms-linear-gradient(-45deg, #111b, #222b), url('images/bdr.jpg');
-  background-image: -o-linear-gradient(-45deg, #111b, #222b), url('images/bdr.jpg');
-  background-image: -moz-linear-gradient(-45deg, #111b, #222b), url('images/bdr.jpg');
+  background-image: linear-gradient(-45deg, #000c, #111c), url('images/bdr.jpg');
+  background-image: -webkit-linear-gradient(-45deg, #000c, #111c), url('images/bdr.jpg');
+  background-image: -ms-linear-gradient(-45deg, #000c, #111c), url('images/bdr.jpg');
+  background-image: -o-linear-gradient(-45deg, #000c, #111c), url('images/bdr.jpg');
+  background-image: -moz-linear-gradient(-45deg, #000c, #111c), url('images/bdr.jpg');
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+}
+.hall {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-areas: 'h h h h h h h h h h h h'
+                       '. d d d d d i i i i i i';
+  width: 100%;
+  padding-top: 100px;
+}
+.hall h2 {
+  grid-area: h;
+}
+.description {
+  grid-area: d;
+}
+.description p {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 30px;
+  padding-left: 10px;
+  position: relative;
+}
+.description p i {
+  font-size: 28px;
+  position: absolute;
+  left: -36px;
+  top: -4px;
+  color: #1cff00a0;
+}
+.description ul {
+  margin: 8px 0;
+  margin-left: 10px;
+}
+.description ul li {
+  padding: 3px 0;
+}
+.hall img {
+  grid-area: i;
+  margin: auto;
+}
+.vip-hall {
+  grid-template-areas: 'h h h h h h h h h h h h'
+                       'i i i i i i . d d d d d';
+  padding-bottom: 100px;
 }

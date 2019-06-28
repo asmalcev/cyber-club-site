@@ -94,21 +94,9 @@
     width: 100%;
     padding: 20px;
   }
-  .price-block .container, .price-block .information {
-    float: none;
-    width: 100%;
-    font-size: 18px;
-  }
   .price {
     width: 45%;
     margin: 2px;
-  }
-  .price-block .information {
-    padding-left: 30px;
-    display: none;
-  }
-  .price-block .media-container .information {
-    display: block;
   }
   .contact-block {
     grid-template-columns: 1fr;
