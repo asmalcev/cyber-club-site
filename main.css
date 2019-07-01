@@ -385,3 +385,52 @@ footer {
                        'i i i i i i . d d d d d';
   padding-bottom: 100px;
 }
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  background-color: #000c;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+  display: none;
+}
+.modal {
+  background-color: #2a2a2a;
+}
+.modal h2 {
+  padding: 25px 20px;
+  border-bottom: 8px #1cff00 solid;
+  background-color: #181818;
+}
+.modal form {
+  padding: 25px 50px;
+}
+.modal input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 6px;
+  color: #222;
+  font-size: 18px;
+  background-color: #f5f5f5;
+  border: 1px #666 solid;
+}
+.modal input[type=button] {
+  background-color: transparent;
+  color: #f5f5f5;
+  border: 1px #f5f5f5 solid;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+.modal input[type=button]:hover {
+  background-color: #f5f5f566;
+}
