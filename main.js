@@ -63,3 +63,26 @@ ymaps.ready(function () {
         })
     myMap.geoObjects.add(myPlacemarkWithContent)
 })
+
+document
+  .querySelectorAll('.btn-order')
+  .forEach(btn => {
+  btn.addEventListener('click', _ => {
+    document
+      .querySelector('.modal-wrapper')
+      .style['display'] = 'block'
+    body.style['overflow'] = 'hidden'
+  })
+})
+function closeModal() {
+  document
+    .querySelector('.modal-wrapper')
+    .style['display'] = 'none'
+  body.style['overflow'] = 'auto'
+}
+document
+  .querySelector('.modal-back')
+  .addEventListener('click', closeModal)
+window.addEventListener('keydown', e => {
+  if (e.keyCode == 27) closeModal()
+})

@@ -63,7 +63,7 @@
     </div>
     <div class="achievement">
       <i class="p-gamepad"></i>
-      <p>Игровые приставки Sony PlayStation 4 Pro</p>
+      <p>PLAYStation 4 PRO</p>
     </div>
     <div class="achievement">
       <i class="p-restaurant"></i>
@@ -245,6 +245,9 @@
         </div>
       </div>
     </div>
+    <div class="btn-container">
+      <button class="btn-order">Забронировать</button>
+    </div>
   </div>
   <div class="bg-gradient background-container" id="adress">
     <h2 class="section-name">Наши контакты и адресс</h2>
@@ -280,13 +283,19 @@
     <p>&copy; All rights reserved. 2019</p>
   </footer>
   <div class="modal-wrapper">
+    <div class="modal-back"></div>
     <div class="modal">
-      <h2>Оставьте свой телефон и мы перезвоним вам!</h2>
+      <h2>Забронируйте место</h2>
       <form action="" id="modal-form">
-        <input type="text" placeholder="Ваше имя" name="name">
-        <input type="text" placeholder="Номер телефона" name="phone">
+        <input type="text" placeholder="Как к Вам обращаться?" name="name" autocomplete="off">
+        <input type="text" placeholder="Телефона" name="phone" autocomplete="off">
+        <input type="text" placeholder="Количество мест" name="count" autocomplete="off">
+        <input type="text" placeholder="Дата и время" name="date" autocomplete="off">
         <input type="button" value="Отправить">
       </form>
+      <div class="btn-container">
+        <button onclick="closeModal()">Закрыть</button>
+      </div>
     </div>
   </div>
   <script src="https://api-maps.yandex.ru/2.1/?load=package.full&lang=ru-RU"></script>
