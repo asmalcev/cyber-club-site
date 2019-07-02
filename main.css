@@ -107,15 +107,28 @@ header .btn {
   text-align: left;
 }
 .welcome-block .wrapper {
-  width: 508px;
+  width: 560px;
   font-size: 18px;
   word-spacing: 3px;
   z-index: 1;
 }
 .welcome-block h2 {
-  position: relative;
   font-size: 100px;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
+  text-align: left;
+  padding: 0 20px;
+  position: relative;
+  animation-name: show;
+  animation-duration: .5s;
+}
+@keyframes show {
+  from {
+    transform: translateX(-100vw);
+  }
+}
+.welcome-block p {
+  margin-left: 80px;
+  text-align: left;
 }
 .price-list {
   width: 100%;
