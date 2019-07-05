@@ -129,6 +129,13 @@ header .btn {
 .welcome-block p {
   margin-left: 80px;
   text-align: left;
+  animation-name: show2;
+  animation-duration: .5s;
+}
+@keyframes show2 {
+  from {
+    transform: translateX(100vw);
+  }
 }
 .price-list {
   width: 100%;
@@ -260,6 +267,9 @@ footer {
   display: grid;
   grid-template-columns: 10% 90%;
 }
+.contact:nth-of-type(6) {
+  display: block;
+}
 .contact p {
   font-size: 20px;
   display: inline-block;
@@ -268,12 +278,12 @@ footer {
   font-size: 30px;
   color: #1cff00a0;
 }
-.contact a {
+.contact a.under {
   color: #1cff00a0;
   position: relative;
   font-weight: bold;
 }
-.contact a::before {
+.contact a.under::before {
   content: '';
   position: absolute;
   left: 0;
@@ -285,7 +295,7 @@ footer {
   height: 2px;
   width: 0;
 }
-.contact a:hover::before {
+.contact a.under:hover::before {
   width: 100%;
 }
 .ymaps-2-1-74-ground-pane {
@@ -338,11 +348,11 @@ footer {
   background-attachment: fixed;
 }
 .lounge {
-  background-image: linear-gradient(-45deg, #000c, #111c), url('images/lounge.jpg');
-  background-image: -webkit-linear-gradient(-45deg, #000c, #111c), url('images/lounge.jpg');
-  background-image: -ms-linear-gradient(-45deg, #000c, #111c), url('images/lounge.jpg');
-  background-image: -o-linear-gradient(-45deg, #000c, #111c), url('images/lounge.jpg');
-  background-image: -moz-linear-gradient(-45deg, #000c, #111c), url('images/lounge.jpg');
+  background-image: linear-gradient(-45deg, #000c, #111c), url('images/lounge0.jpg');
+  background-image: -webkit-linear-gradient(-45deg, #000c, #111c), url('images/lounge0.jpg');
+  background-image: -ms-linear-gradient(-45deg, #000c, #111c), url('images/lounge0.jpg');
+  background-image: -o-linear-gradient(-45deg, #000c, #111c), url('images/lounge0.jpg');
+  background-image: -moz-linear-gradient(-45deg, #000c, #111c), url('images/lounge0.jpg');
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -407,6 +417,11 @@ footer {
   z-index: 999;
   background-color: #000c;
   display: none;
+  overflow-y: auto;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  opacity: 0;
 }
 .modal {
   background-color: #2a2a2a;
@@ -415,8 +430,6 @@ footer {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 .modal h2 {
@@ -467,41 +480,64 @@ footer {
   bottom: 0;
 }
 .btn-container {
-  padding: 20px;
+  padding: 40px 20px;
 }
 .btn-order {
   margin: 0 auto;
   display: block;
   background-color: transparent;
-  border: 3px #d6d6d6 solid;
+  border: 3px #1cff00a0 solid;
   font-size: 22px;
-  padding: 12px;
+  padding: 10px 20px;
   cursor: pointer;
-  color: transparent;
   position: relative;
   outline: none;
-}
-.btn-order::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 0;
-  background-color: #1cff00a0;
+  border-radius: 58px;
   -webkit-transition: .3s;
   -o-transition: .3s;
   transition: .3s;
 }
-.btn-order::after {
-  content: 'Забронировать';
-  color: #d6d6d6;
-  transform: translateY(-50%);
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
+.btn-order:hover {
+  border-color: #1cff00a0;
+  background-color: #1cff00a0;
 }
-.btn-order:hover::before {
+.cube-wrapper {
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+  position: relative;
+}
+.cube, .cube div {
+  width: 100%;
   height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  text-align: center;
+  line-height: 48px;
+}
+.cube-top {
+  -webkit-transform: translate(0,-100%) rotateX(90deg);
+  -ms-transform: translate(0,-100%) rotateX(90deg);
+  -o-transform: translate(0,-100%) rotateX(90deg);
+  transform: translate(0,-100%) rotateX(90deg);
+  transform-origin: bottom;
+  background-color: #1cff00a0;
+  border-radius: 4px;
+}
+.cube-top i {
+  color: #d6d6d6;
+}
+.cube-wrapper:hover .cube {
+  -webkit-transform: translate(0,50%) rotateX(-90deg);
+  -ms-transform: translate(0,50%) rotateX(-90deg);
+  -o-transform: translate(0,50%) rotateX(-90deg);
+  transform: translate(0,50%) rotateX(-90deg)
 }

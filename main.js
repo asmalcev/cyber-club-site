@@ -64,21 +64,41 @@ ymaps.ready(function () {
     myMap.geoObjects.add(myPlacemarkWithContent)
 })
 
+let modal = {
+  html: document.querySelector('.modal-wrapper'),
+  isOpen: false
+}
 document
   .querySelectorAll('.btn-order')
   .forEach(btn => {
   btn.addEventListener('click', _ => {
-    document
-      .querySelector('.modal-wrapper')
-      .style['display'] = 'block'
-    body.style['overflow'] = 'hidden'
+    if (!modal.isOpen) {
+      modal
+        .html
+        .style['display'] = 'block'
+      body.style['overflow'] = 'hidden'
+      setTimeout(_ => {
+        modal
+          .html
+          .style['opacity'] = '1'
+          modal.isOpen = true
+      }, 100)
+    }
   })
 })
 function closeModal() {
-  document
-    .querySelector('.modal-wrapper')
-    .style['display'] = 'none'
-  body.style['overflow'] = 'auto'
+  if (modal.isOpen) {
+    modal
+      .html
+      .style['opacity'] = '0'
+    body.style['overflow'] = 'auto'
+    setTimeout(_ => {
+      modal
+        .html
+        .style['display'] = 'none'
+        modal.isOpen = false
+    }, 300)
+  }
 }
 document
   .querySelector('.modal-back')
@@ -86,3 +106,30 @@ document
 window.addEventListener('keydown', e => {
   if (e.keyCode == 27) closeModal()
 })
+
+let lounge = {
+  html: document.querySelector('.lounge'),
+  opacity: 204,
+  t: 0,
+  image: 0
+}
+function animateBackground() {
+  requestAnimationFrame(animateBackground)
+  lounge.t++
+
+  if (lounge.t > 200) {
+    lounge.opacity++
+    if (lounge.opacity > 255) {
+      lounge.opacity = 204
+      lounge.t = 0
+      lounge.image = (lounge.image + 1) % 3
+    }
+  }
+  lounge
+    .html
+    .style['background-image'] = `-webkit-linear-gradient(-45deg,
+      #000000${lounge.opacity.toString(16)},
+      #111111${lounge.opacity.toString(16)}),
+      url('images/lounge${lounge.image}.jpg')`
+}
+// animateBackground()
