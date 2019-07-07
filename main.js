@@ -7,18 +7,21 @@ const body = document.querySelector('body')
 menu
   .btn
   .addEventListener('click', _ => {
-    if (menu.isOpen) {
-      menu.isOpen = false
-      menu.html.style['transform'] = 'translateX(-101%)'
-      menu.btn.classList.remove('active')
-      body.style['overflow'] = 'auto'
-    } else {
+    if (!menu.isOpen) {
       menu.isOpen = true
       menu.html.style['transform'] = 'translateX(0)'
       menu.btn.classList.add('active')
       body.style['overflow'] = 'hidden'
-    }
+    } else closeMenu()
   })
+function closeMenu() {
+  if (window.innerWidth < 1000) {
+    menu.isOpen = false
+    menu.html.style['transform'] = 'translateX(-101%)'
+    menu.btn.classList.remove('active')
+    body.style['overflow'] = 'auto'
+  }
+}
 
 let achievements = {
   activeIndex: 0,
@@ -117,7 +120,7 @@ function animateBackground() {
   requestAnimationFrame(animateBackground)
   lounge.t++
 
-  if (lounge.t > 200) {
+  if (lounge.t > 350) {
     lounge.opacity++
     if (lounge.opacity > 255) {
       lounge.opacity = 204

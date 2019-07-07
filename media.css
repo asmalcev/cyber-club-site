@@ -67,6 +67,15 @@
   }
   .welcome-block p {
     margin-top: 10vh;
+    text-align: center;
+    margin-left: 0;
+  }
+  .welcome-block .wrapper {
+    width: 100%;
+  }
+  .welcome-block img {
+    width: 100%;
+    height: auto;
   }
   .achievements {
     flex-direction: column;
@@ -101,6 +110,9 @@
   .contact-block {
     grid-template-columns: 1fr;
     padding: 10px 5%;
+  }
+  #adress h3 {
+    margin-top: 40px;
   }
   .contact {
     grid-template-columns: 20% 80%;

@@ -12,25 +12,21 @@
 </head>
 <body>
   <header>
-    <div class="logo">
+    <!-- <div class="logo">
       <img src="images/logo.png" alt="Logo">
-      <!-- <div class="adress">
-        <p>г.Чебоксары ул.Калинина дом 91к1</p>
-        <p>Ежедневно и круглосуточно</p>
-      </div> -->
-    </div>
+    </div> -->
     <div class="menu">
-      <div class="menu-element">
+      <div class="menu-element" onclick="closeMenu()">
         <a href="#halls">Залы</a>
       </div>
-      <div class="menu-element">
+      <div class="menu-element" onclick="closeMenu()">
         <a href="#price">Цены</a>
       </div>
-      <div class="menu-element">
+      <div class="menu-element" onclick="closeMenu()">
         <a href="#adress">Контакты</a>
       </div>
-      <div class="menu-element">
-        <a href="#4">Социальное</a>
+      <div class="menu-element" onclick="closeMenu()">
+        <a href="#map">Карта</a>
       </div>
       <div class="menu-element">
         <a href="tel:79656886916">
@@ -46,7 +42,8 @@
   </header>
   <div class="welcome-block grd bg-gradient">
     <div class="wrapper">
-      <h2>Cyber city</h2>
+      <!-- <h2>Cyber city</h2> -->
+      <img src="images/logo.png" alt="Logo">
       <p>- уникальный компьютерный клуб, оснащенный передовым "железом",
         в стенах которого Вы можете не только погрузиться в мир киберспорта,
         но и полноценно отдохнуть, приятно провести свободное время.</p>
@@ -307,7 +304,9 @@
         <i class="p-clock"></i>
         <p>Мы работаем круглосуточно!</p>
       </div>
-      <div class="contact">
+    </div>
+    <h3>Вы можете найти нас в соцальных сетях</h3>
+    <div class="social">
         <a href="https://www.twitch.tv/cybercitycheb" target="_blank">
           <div class="cube-wrapper">
             <div class="cube">
@@ -345,7 +344,6 @@
           </div>
         </a>
       </div>
-    </div>
   </div>
   <div id="map"></div>
   <footer class="bg-gradient">

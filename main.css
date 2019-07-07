@@ -43,7 +43,8 @@ header {
   height: 64px;
   background: #111;
   display: grid;
-  grid-template-columns: 20% 80%;
+  /* grid-template-columns: 20% 80%; */
+  grid-template-columns: 100%;
   z-index: 999;
   -webkit-transition: .3s;
   -o-transition: .3s;
@@ -94,7 +95,7 @@ header .btn {
 }
 .welcome-block {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #1a1a1a;
   display: -webkit-flex;
   display: -ms-flex;
@@ -105,6 +106,7 @@ header .btn {
   overflow: hidden;
   padding: 20px;
   text-align: left;
+  padding-bottom: 50px;
 }
 .welcome-block .wrapper {
   width: 560px;
@@ -112,12 +114,18 @@ header .btn {
   word-spacing: 3px;
   z-index: 1;
 }
-.welcome-block h2 {
+/* .welcome-block h2 {
   font-size: 100px;
   margin-bottom: 30px;
   text-align: left;
   padding: 0 20px;
-  position: relative;
+  animation-name: show;
+  animation-duration: .5s;
+} */
+.welcome-block img {
+  height: 64vh;
+  width: auto;
+  margin-bottom: 30px;
   animation-name: show;
   animation-duration: .5s;
 }
@@ -266,9 +274,6 @@ footer {
 .contact {
   display: grid;
   grid-template-columns: 10% 90%;
-}
-.contact:nth-of-type(6) {
-  display: block;
 }
 .contact p {
   font-size: 20px;
@@ -451,8 +456,8 @@ footer {
 }
 .modal input[type=button], .modal button {
   background-color: transparent;
-  color: #f5f5f5;
-  border: 1px #f5f5f5 solid;
+  color: #1cff00;
+  border: 3px #1cff00 solid;
   outline: none;
   cursor: pointer;
   -webkit-transition: .3s;
@@ -460,7 +465,11 @@ footer {
   transition: .3s;
   margin-top: 15px;
 }
-.modal input[type=button]:hover, .modal button:hover {
+.modal input[type=button]:hover {
+  background-color: #1cff00a0;
+  color: #f5f5f5;
+}
+.modal button:hover {
   background-color: #f5f5f566;
 }
 .modal button {
@@ -468,6 +477,7 @@ footer {
   padding: 12px;
   font-size: 18px;
   border: none;
+  color: #f5f5f5;
 }
 .modal .btn-container {
   padding: 0 50px 15px 50px;
@@ -529,15 +539,33 @@ footer {
   -o-transform: translate(0,-100%) rotateX(90deg);
   transform: translate(0,-100%) rotateX(90deg);
   transform-origin: bottom;
-  background-color: #1cff00a0;
+  background-color: #fefefe;
   border-radius: 4px;
 }
-.cube-top i {
-  color: #d6d6d6;
+.cube-top .p-twitch {
+  color: #4b367c;
+}
+.cube-top .p-vkontakte {
+  color: #4a76a8;
+}
+.cube-top .p-instagram {
+  color: #d92d79;
 }
 .cube-wrapper:hover .cube {
   -webkit-transform: translate(0,50%) rotateX(-90deg);
   -ms-transform: translate(0,50%) rotateX(-90deg);
   -o-transform: translate(0,50%) rotateX(-90deg);
   transform: translate(0,50%) rotateX(-90deg)
+}
+.social {
+  width: 100%;
+  padding: 18px 0;
+  text-align: center;
+  font-size: 28px;
+}
+.social a {
+  margin: 0 10px;
+}
+.social i {
+  color: #1cff00a0;
 }
