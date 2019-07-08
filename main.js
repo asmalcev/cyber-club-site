@@ -114,18 +114,26 @@ let lounge = {
   html: document.querySelector('.lounge'),
   opacity: 204,
   t: 0,
-  image: 0
+  image: 0,
+  bool: true
 }
 function animateBackground() {
   requestAnimationFrame(animateBackground)
   lounge.t++
 
   if (lounge.t > 350) {
-    lounge.opacity++
-    if (lounge.opacity > 255) {
-      lounge.opacity = 204
-      lounge.t = 0
-      lounge.image = (lounge.image + 1) % 3
+    if (lounge.bool) {
+      lounge.opacity++
+      if (lounge.opacity > 255) {
+        lounge.image = (lounge.image + 1) % 3
+        lounge.bool = false
+      }
+    } else {
+      lounge.opacity -= 2
+      if (lounge.opacity < 204) {
+        lounge.t = 0
+        lounge.bool = true
+      }
     }
   }
   lounge
@@ -135,4 +143,4 @@ function animateBackground() {
       #111111${lounge.opacity.toString(16)}),
       url('images/lounge${lounge.image}.jpg')`
 }
-// animateBackground()
+animateBackground()
