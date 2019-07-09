@@ -68,8 +68,8 @@ header .btn {
 .menu-element:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
-.menu-element:nth-of-type(6):hover {
-  background: none;
+.menu-element:nth-of-type(5) a p {
+  font-size: 18px;
 }
 .menu-element a {
   display: block;
@@ -104,14 +104,6 @@ header .btn {
   -ms-align-items: center;
   align-items: center;
 }
-/* .welcome-block h2 {
-  font-size: 100px;
-  margin-bottom: 30px;
-  text-align: left;
-  padding: 0 20px;
-  animation-name: show;
-  animation-duration: .5s;
-} */
 .welcome-block img {
   height: 64vh;
   width: auto;
@@ -122,17 +114,6 @@ header .btn {
 @keyframes show {
   from {
     transform: translateX(-100vw);
-  }
-}
-.welcome-block p {
-  margin-left: 80px;
-  text-align: left;
-  animation-name: show2;
-  animation-duration: .5s;
-}
-@keyframes show2 {
-  from {
-    transform: translateX(100vw);
   }
 }
 .price-list {
@@ -184,7 +165,7 @@ header .btn {
   font-size: 22px;
 }
 .price p:nth-of-type(2) {
-  font-size: 30px;
+  font-size: 26px;
   color: #1cff00a0;
 }
 .price-block > h4 {
@@ -315,6 +296,15 @@ footer {
   font-size: 14px;
   color: #444;
 }
+.hall {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-areas: 'h h h h h h h h h h h h'
+                       '. d d d d d i i i i i i';
+  width: 100%;
+  padding-top: 100px;
+}
 .bg-gradient {
   background: linear-gradient(-45deg, #111, #222);
   background: -webkit-linear-gradient(-45deg, #111, #222);
@@ -351,15 +341,14 @@ footer {
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  padding-bottom: 80px;
+  padding-top: 40px;
 }
-.hall {
-  padding: 20px;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-areas: 'h h h h h h h h h h h h'
-                       '. d d d d d i i i i i i';
-  width: 100%;
-  padding-top: 100px;
+.lounge h2 {
+  padding-bottom: 40px;
+}
+.lounge h2::before {
+  bottom: 28px;
 }
 .hall h2 {
   grid-area: h;
@@ -558,4 +547,7 @@ footer {
 }
 .social i {
   color: #1cff00a0;
+}
+.description .btn-container {
+  margin-top: 120px;
 }

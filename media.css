@@ -112,6 +112,7 @@
     display: -ms-flex;
     display: flex;
     flex-direction: column;
+    padding-bottom: 0;
   }
   .hall img {
     display: none;
@@ -130,5 +131,11 @@
   }
   .description ul {
     font-size: 18px;
+  }
+  .description .btn-container {
+    margin-top: 20px;
+  }
+  .lounge {
+    padding-bottom: 40px;
   }
 }

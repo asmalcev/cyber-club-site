@@ -14,16 +14,16 @@
   <header>
     <div class="menu">
       <div class="menu-element" onclick="closeMenu()">
-        <a href="#halls">Залы</a>
+        <a href="#halls">Игровые зоны</a>
+      </div>
+      <div class="menu-element" onclick="closeMenu()">
+        <a href="#lounge">Lounge зона</a>
       </div>
       <div class="menu-element" onclick="closeMenu()">
         <a href="#price">Цены</a>
       </div>
       <div class="menu-element" onclick="closeMenu()">
         <a href="#adress">Контакты</a>
-      </div>
-      <div class="menu-element" onclick="closeMenu()">
-        <a href="#map">Карта</a>
       </div>
       <div class="menu-element">
         <a href="tel:79656886916">
@@ -39,11 +39,7 @@
   </header>
   <div class="welcome-block grd bg-gradient">
     <div class="wrapper">
-      <!-- <h2>Cyber city</h2> -->
       <img src="images/logo.png" alt="Logo">
-      <!-- <p>- уникальный компьютерный клуб, оснащенный передовым "железом",
-        в стенах которого Вы можете не только погрузиться в мир киберспорта,
-        но и полноценно отдохнуть, приятно провести свободное время.</p> -->
     </div>
   </div>
   <div class="achievements">
@@ -117,15 +113,15 @@
       <button class="btn-order">Забронировать</button>
     </div>
   </div>
-  <div class="hall lounge" id="halls">
-    <h2 class="section-name">Лаунж зона</h2>
+  <div class="hall lounge" id="lounge">
+    <h2 class="section-name">Lounge зона</h2>
     <div class="description">
       <p><i class="p-home"></i>Уютная атмосфера и широкий выбор развлечений</p>
       <p><i class="p-restaurant"></i>Собственная кухня</p>
       <p><i class="p-beer"></i>Прохладительные напитки и кальяны</p>
       <p><i class="p-puzzle"></i>Лучшие настольные игры</p>
     </div>
-    <img src="images/main-pc.png" alt="PC">
+    <img src="images/kalyan.png" alt="PC">
   </div>
   <div class="hall vip-hall bg-gradient">
     <h2 class="section-name">PS4 PRO зона</h2>
@@ -133,6 +129,9 @@
         <p><i class="p-gamepad"></i>Игровые консоли SONY PLAYStation 4 PRO</p>
         <p><i class="p-desktop"></i>Огромные 50-дюймовые 4k телевизоры</p>
         <p><i class="p-home"></i>Мягкие, изолированные диваны позволят комфортно расположится большой компании</p>
+        <div class="btn-container">
+          <button class="btn-order">Поиграть</button>
+        </div>
     </div>
     <img src="images/ps.png" alt="PC">
   </div>
@@ -279,7 +278,7 @@
     </div>
   </div>
   <div class="bg-gradient background-container" id="adress">
-    <h2 class="section-name">Наши контакты и адресс</h2>
+    <h2 class="section-name">Контакты</h2>
     <div class="contact-block">
       <div class="contact">
         <i class="p-home"></i>
@@ -302,7 +301,9 @@
         <p>Мы работаем круглосуточно!</p>
       </div>
     </div>
-    <h3>Вы можете найти нас в соцальных сетях</h3>
+  </div>
+  <div id="map"></div>
+  <footer class="bg-gradient">
     <div class="social">
         <a href="https://www.twitch.tv/cybercitycheb" target="_blank">
           <div class="cube-wrapper">
@@ -341,9 +342,6 @@
           </div>
         </a>
       </div>
-  </div>
-  <div id="map"></div>
-  <footer class="bg-gradient">
     <p>&copy; All rights reserved. 2019</p>
   </footer>
   <div class="modal-wrapper">
