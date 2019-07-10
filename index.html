@@ -349,11 +349,11 @@
     <div class="modal">
       <h2>Забронируйте место</h2>
       <form action="" id="modal-form">
-        <input type="text" placeholder="Как к Вам обращаться?" name="name" autocomplete="off">
-        <input type="text" placeholder="Телефона" name="phone" autocomplete="off">
-        <input type="text" placeholder="Количество мест" name="count" autocomplete="off">
-        <input type="text" placeholder="Дата и время" name="date" autocomplete="off">
-        <input type="button" value="Отправить">
+        <input type="text" placeholder="Как к Вам обращаться?" name="name" autocomplete="off" onclick="clearRed(this)">
+        <input type="text" placeholder="Телефона" name="phone" autocomplete="off" onclick="clearRed(this)">
+        <input type="number" placeholder="Количество мест" name="count" autocomplete="off" onclick="clearRed(this)">
+        <input type="text" placeholder="Дата и время" name="date" autocomplete="off" onclick="clearRed(this)">
+        <input type="button" value="Отправить" name="btn">
       </form>
       <div class="btn-container">
         <button onclick="closeModal()">Закрыть</button>

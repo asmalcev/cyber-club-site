@@ -125,7 +125,7 @@ function animateBackground() {
     if (lounge.bool) {
       lounge.opacity++
       if (lounge.opacity > 255) {
-        lounge.image = (lounge.image + 1) % 3
+        lounge.image = (lounge.image + 1) % 4
         lounge.bool = false
       }
     } else {
@@ -144,3 +144,60 @@ function animateBackground() {
       url('images/lounge${lounge.image}.jpg')`
 }
 animateBackground()
+
+let form = {
+  html: document.querySelector('#modal-form'),
+  btn: document.querySelector('#modal-form')['btn'],
+  isOk: true
+}
+form
+  .btn
+  .addEventListener('click', sendData)
+function sendData() {
+  form.isOk = true
+	if (form.html['name'].value == '') {
+    form.isOk = false
+    form
+      .html['name']
+      .style['border-color'] = '#e70000'
+  }
+  if (form.html['count'].value == '') {
+    form.isOk = false
+    form
+      .html['count']
+      .style['border-color'] = '#e70000'
+  }
+  if (form.html['date'].value == '') {
+    form.isOk = false
+    form
+      .html['date']
+      .style['border-color'] = '#e70000'
+  }
+  if (form.html['phone'].value == ''
+      || form
+          .html['phone']
+          .value
+          .search(/^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/) == -1) {
+    form.isOk = false
+    form
+      .html['phone']
+      .style['border-color'] = '#e70000'
+  }
+	if (form.isOk) {
+		let x = new XMLHttpRequest()
+		x.open('GET', `../mail.php?name=${form.html['name'].value}
+                              &tel=${form.html['phone'].value}
+                              &count=${form.html['count'].value}
+                              &date=${form.html['date'].value}`, true)
+		x.send()
+
+    form.html['name'].value = ''
+    form.html['phone'].value = ''
+    form.html['count'].value = ''
+    form.html['date'].value = ''
+		closeModal()
+	}
+}
+function clearRed(el) {
+  el.style['border-color'] = '#666'
+}
