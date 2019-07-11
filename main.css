@@ -79,41 +79,45 @@ header .btn {
 }
 .welcome-block {
   width: 100%;
-  min-height: 100vh;
-  background-color: #1a1a1a;
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
-  justify-content: center;
-  -ms-align-items: center;
-  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+.welcome-block .back, .welcome-block .front {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
-  padding: 20px;
-  text-align: left;
-  padding-bottom: 50px;
 }
-.welcome-block .wrapper {
-  width: 560px;
-  font-size: 18px;
-  word-spacing: 3px;
-  z-index: 1;
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
-  justify-content: center;
-  -ms-align-items: center;
-  align-items: center;
+.welcome-block .front {
+  background: linear-gradient(-45deg, #111c, #222c);
+  background: -webkit-linear-gradient(-45deg, #111c, #222c);
+  background: -ms-linear-gradient(-45deg, #111c, #222c);
+  background: -moz-linear-gradient(-45deg, #111c, #222c);
+  background: -o-linear-gradient(-45deg, #111c, #222c);
 }
-.welcome-block img {
+.welcome-block .back img {
+  width: 100%;
+  height: auto;
+}
+.welcome-block .front img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   height: 64vh;
   width: auto;
-  margin-bottom: 30px;
   animation-name: show;
   animation-duration: .5s;
 }
 @keyframes show {
   from {
-    transform: translateX(-100vw);
+    -webkit-transform: translate(-100vw, -50%);
+    -ms-transform: translate(-100vw, -50%);
+    transform: translate(-100vw, -50%);
   }
 }
 .price-list {
@@ -312,23 +316,9 @@ footer {
   background: -moz-linear-gradient(-45deg, #111, #222);
   background: -o-linear-gradient(-45deg, #111, #222);
 }
-.grd {
-  background: linear-gradient(-45deg, #000c, #111c), url('images/grd.jpg');
-  background: -webkit-linear-gradient(-45deg, #000c, #111c), url('images/grd.jpg');
-  -webkit-background: linear-gradient(-45deg, #000c, #111c), url('images/grd.jpg');
-  -webkit-background: -webkit-linear-gradient(-45deg, #000c, #111c), url('images/grd.jpg');
-  background: -ms-linear-gradient(-45deg, #000c, #111c), url('images/grd.jpg');
-  background: -o-linear-gradient(-45deg, #000c, #111c), url('images/grd.jpg');
-  background: -moz-linear-gradient(-45deg, #000c, #111c), url('images/grd.jpg');
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-}
 .bdr {
   background: linear-gradient(-45deg, #000c, #111c), url('images/bdr.jpg');
   background: -webkit-linear-gradient(-45deg, #000c, #111c), url('images/bdr.jpg');
-  -webkit-background: linear-gradient(-45deg, #000c, #111c), url('images/bdr.jpg');
-  -webkit-background: -webkit-linear-gradient(-45deg, #000c, #111c), url('images/bdr.jpg');
   background: -ms-linear-gradient(-45deg, #000c, #111c), url('images/bdr.jpg');
   background: -o-linear-gradient(-45deg, #000c, #111c), url('images/bdr.jpg');
   background: -moz-linear-gradient(-45deg, #000c, #111c), url('images/bdr.jpg');
@@ -339,8 +329,6 @@ footer {
 .lounge {
   background: linear-gradient(-45deg, #000c, #111c), url('images/lounge0.jpg');
   background: -webkit-linear-gradient(-45deg, #000c, #111c), url('images/lounge0.jpg');
-  -webkit-background: linear-gradient(-45deg, #000c, #111c), url('images/lounge0.jpg');
-  -webkit-background: -webkit-linear-gradient(-45deg, #000c, #111c), url('images/lounge0.jpg');
   background: -ms-linear-gradient(-45deg, #000c, #111c), url('images/lounge0.jpg');
   background: -o-linear-gradient(-45deg, #000c, #111c), url('images/lounge0.jpg');
   background: -moz-linear-gradient(-45deg, #000c, #111c), url('images/lounge0.jpg');

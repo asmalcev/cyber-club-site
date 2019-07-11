@@ -52,20 +52,9 @@
   header .btn.active span:nth-of-type(3) {
     width: 20px;
   }
-  .welcome-block h2 {
-    font-size: 17vw;
-  }
-  .welcome-block p {
-    margin-top: 10vh;
-    text-align: center;
-    margin-left: 0;
-  }
-  .welcome-block .wrapper {
-    width: 100%;
-  }
-  .welcome-block img {
-    width: 100%;
-    height: auto;
+  .welcome-block .back img {
+    height: 100%;
+    width: auto;
   }
   .achievements {
     flex-direction: column;

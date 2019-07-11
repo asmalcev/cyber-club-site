@@ -138,7 +138,7 @@ function animateBackground() {
   }
   lounge
     .html
-    .style['background'] = `-webkit-linear-gradient(-45deg,
+    .style['background-image'] = `-webkit-linear-gradient(-45deg,
       #000000${lounge.opacity.toString(16)},
       #111111${lounge.opacity.toString(16)}),
       url('images/lounge${lounge.image}.jpg')`
