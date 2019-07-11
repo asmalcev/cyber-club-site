@@ -315,6 +315,8 @@ footer {
 .grd {
   background: linear-gradient(-45deg, #000c, #111c), url('images/grd.jpg');
   background: -webkit-linear-gradient(-45deg, #000c, #111c), url('images/grd.jpg');
+  -webkit-background: linear-gradient(-45deg, #000c, #111c), url('images/grd.jpg');
+  -webkit-background: -webkit-linear-gradient(-45deg, #000c, #111c), url('images/grd.jpg');
   background: -ms-linear-gradient(-45deg, #000c, #111c), url('images/grd.jpg');
   background: -o-linear-gradient(-45deg, #000c, #111c), url('images/grd.jpg');
   background: -moz-linear-gradient(-45deg, #000c, #111c), url('images/grd.jpg');
@@ -337,6 +339,8 @@ footer {
 .lounge {
   background: linear-gradient(-45deg, #000c, #111c), url('images/lounge0.jpg');
   background: -webkit-linear-gradient(-45deg, #000c, #111c), url('images/lounge0.jpg');
+  -webkit-background: linear-gradient(-45deg, #000c, #111c), url('images/lounge0.jpg');
+  -webkit-background: -webkit-linear-gradient(-45deg, #000c, #111c), url('images/lounge0.jpg');
   background: -ms-linear-gradient(-45deg, #000c, #111c), url('images/lounge0.jpg');
   background: -o-linear-gradient(-45deg, #000c, #111c), url('images/lounge0.jpg');
   background: -moz-linear-gradient(-45deg, #000c, #111c), url('images/lounge0.jpg');
