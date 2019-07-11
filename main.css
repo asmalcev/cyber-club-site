@@ -313,31 +313,31 @@ footer {
   background: -o-linear-gradient(-45deg, #111, #222);
 }
 .grd {
-  background-image: linear-gradient(-45deg, #000c, #111c), url('images/grd.jpg');
-  background-image: -webkit-linear-gradient(-45deg, #000c, #111c), url('images/grd.jpg');
-  background-image: -ms-linear-gradient(-45deg, #000c, #111c), url('images/grd.jpg');
-  background-image: -o-linear-gradient(-45deg, #000c, #111c), url('images/grd.jpg');
-  background-image: -moz-linear-gradient(-45deg, #000c, #111c), url('images/grd.jpg');
+  background: linear-gradient(-45deg, #000c, #111c), url('images/grd.jpg');
+  background: -webkit-linear-gradient(-45deg, #000c, #111c), url('images/grd.jpg');
+  background: -ms-linear-gradient(-45deg, #000c, #111c), url('images/grd.jpg');
+  background: -o-linear-gradient(-45deg, #000c, #111c), url('images/grd.jpg');
+  background: -moz-linear-gradient(-45deg, #000c, #111c), url('images/grd.jpg');
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
 }
 .bdr {
-  background-image: linear-gradient(-45deg, #000c, #111c), url('images/bdr.jpg');
-  background-image: -webkit-linear-gradient(-45deg, #000c, #111c), url('images/bdr.jpg');
-  background-image: -ms-linear-gradient(-45deg, #000c, #111c), url('images/bdr.jpg');
-  background-image: -o-linear-gradient(-45deg, #000c, #111c), url('images/bdr.jpg');
-  background-image: -moz-linear-gradient(-45deg, #000c, #111c), url('images/bdr.jpg');
+  background: linear-gradient(-45deg, #000c, #111c), url('images/bdr.jpg');
+  background: -webkit-linear-gradient(-45deg, #000c, #111c), url('images/bdr.jpg');
+  background: -ms-linear-gradient(-45deg, #000c, #111c), url('images/bdr.jpg');
+  background: -o-linear-gradient(-45deg, #000c, #111c), url('images/bdr.jpg');
+  background: -moz-linear-gradient(-45deg, #000c, #111c), url('images/bdr.jpg');
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
 }
 .lounge {
-  background-image: linear-gradient(-45deg, #000c, #111c), url('images/lounge0.jpg');
-  background-image: -webkit-linear-gradient(-45deg, #000c, #111c), url('images/lounge0.jpg');
-  background-image: -ms-linear-gradient(-45deg, #000c, #111c), url('images/lounge0.jpg');
-  background-image: -o-linear-gradient(-45deg, #000c, #111c), url('images/lounge0.jpg');
-  background-image: -moz-linear-gradient(-45deg, #000c, #111c), url('images/lounge0.jpg');
+  background: linear-gradient(-45deg, #000c, #111c), url('images/lounge0.jpg');
+  background: -webkit-linear-gradient(-45deg, #000c, #111c), url('images/lounge0.jpg');
+  background: -ms-linear-gradient(-45deg, #000c, #111c), url('images/lounge0.jpg');
+  background: -o-linear-gradient(-45deg, #000c, #111c), url('images/lounge0.jpg');
+  background: -moz-linear-gradient(-45deg, #000c, #111c), url('images/lounge0.jpg');
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
