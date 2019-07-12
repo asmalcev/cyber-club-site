@@ -146,7 +146,7 @@ function animateBackground() {
     .img
     .setAttribute('src',`images/lounge${lounge.image}.jpg`)
 }
-animateBackground()
+if (window.innerWidth > 1000) animateBackground()
 
 let form = {
   html: document.querySelector('#modal-form'),
