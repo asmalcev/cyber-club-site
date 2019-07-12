@@ -1,3 +1,8 @@
+/*
+
+Menu element controler
+
+*/
 let menu = {
   isOpen: false,
   html: document.querySelector('header'),
@@ -22,7 +27,11 @@ function closeMenu() {
     body.style['overflow'] = 'auto'
   }
 }
+/*
 
+Achievements animation
+
+*/
 let achievements = {
   activeIndex: 0,
   html: document.querySelectorAll('.achievement'),
@@ -38,13 +47,16 @@ if (window.innerWidth > 1000)
       achievements.html[achievements.activeIndex].classList.add('active')
     }
   }, 2000)
-
 achievements.body.addEventListener('mouseover', _ => {achievements.isOver = true})
 achievements.body.addEventListener('mouseout', _ => {
   achievements.isOver = false
   achievements.html.forEach(ach => {ach.classList.remove('active')})
 })
+/*
 
+Yandex map code
+
+*/
 ymaps.ready(function () {
     let myMap = new ymaps.Map('map', {
           center: [56.14034789, 47.26792762],
@@ -66,7 +78,11 @@ ymaps.ready(function () {
         })
     myMap.geoObjects.add(myPlacemarkWithContent)
 })
+/*
 
+Modal window controler
+
+*/
 let modal = {
   html: document.querySelector('.modal-wrapper'),
   isOpen: false
@@ -109,7 +125,11 @@ document
 window.addEventListener('keydown', e => {
   if (e.keyCode == 27) closeModal()
 })
+/*
 
+Background animation behind Lounge Block
+
+*/
 let lounge = {
   front: document.querySelector('#lounge').childNodes[3],
   img: document.querySelector('#lounge').childNodes[1].childNodes[1],
@@ -146,9 +166,12 @@ function animateBackground() {
     .img
     .setAttribute('src',`images/lounge${lounge.image}.png`)
 }
-// if (window.innerWidth > 1000) 
 animateBackground()
+/*
 
+Form validation and sending AJAX request
+
+*/
 let form = {
   html: document.querySelector('#modal-form'),
   btn: document.querySelector('#modal-form')['btn'],
@@ -159,25 +182,25 @@ form
   .addEventListener('click', sendData)
 function sendData() {
   form.isOk = true
-	if (form.html['name'].value == '') {
+	if (form.html['name'].value == '') { // name validation
     form.isOk = false
     form
       .html['name']
       .style['border-color'] = '#e70000'
   }
-  if (form.html['count'].value == '') {
+  if (form.html['count'].value == '') { // count of people validation
     form.isOk = false
     form
       .html['count']
       .style['border-color'] = '#e70000'
   }
-  if (form.html['date'].value == '') {
+  if (form.html['date'].value == '') { // date validation
     form.isOk = false
     form
       .html['date']
       .style['border-color'] = '#e70000'
   }
-  if (form.html['phone'].value == ''
+  if (form.html['phone'].value == '' // phone validation
       || form
           .html['phone']
           .value
@@ -204,12 +227,16 @@ function sendData() {
 function clearRed(el) {
   el.style['border-color'] = '#666'
 }
+/*
 
+Supportive function to control the size of the back part with image
+
+*/
 document
   .querySelectorAll('.fixed')
   .forEach( block => {
     block.style['height'] = block.childNodes[3].clientHeight + 'px'
-    if (block.childNodes[3].clientHeight > block.childNodes[3].clientWidth) {
+    if (block.childNodes[3].clientHeight > block.childNodes[3].clientWidth) {  // changing the size of image to make it cover all place
       block.childNodes[1].childNodes[1].style['height'] = block.childNodes[3].clientHeight + 'px'
       block.childNodes[1].childNodes[1].style['width'] = 'auto'
     } else {
