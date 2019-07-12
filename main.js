@@ -232,15 +232,17 @@ function clearRed(el) {
 Supportive function to control the size of the back part with image
 
 */
-document
-  .querySelectorAll('.fixed')
-  .forEach( block => {
-    block.style['height'] = block.childNodes[3].clientHeight + 'px'
-    if (block.childNodes[3].clientHeight > block.childNodes[3].clientWidth) {  // changing the size of image to make it cover all place
-      block.childNodes[1].childNodes[1].style['height'] = block.childNodes[3].clientHeight + 'px'
-      block.childNodes[1].childNodes[1].style['width'] = 'auto'
-    } else {
-      block.childNodes[1].childNodes[1].style['height'] = 'auto'
-      block.childNodes[1].childNodes[1].style['width'] = block.childNodes[3].clientWidth + 'px'
-    }
-  })
+window.addEventListener('load', _ => {
+  document
+    .querySelectorAll('.fixed')
+    .forEach( block => {
+      block.style['height'] = block.childNodes[3].clientHeight + 'px'
+      if (block.childNodes[3].clientHeight > block.childNodes[3].clientWidth) {  // changing the size of image to make it cover all place
+        block.childNodes[1].childNodes[1].style['height'] = block.childNodes[3].clientHeight + 'px'
+        block.childNodes[1].childNodes[1].style['width'] = 'auto'
+      } else {
+        block.childNodes[1].childNodes[1].style['height'] = 'auto'
+        block.childNodes[1].childNodes[1].style['width'] = block.childNodes[3].clientWidth + 'px'
+      }
+    })
+})
