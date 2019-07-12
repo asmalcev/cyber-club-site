@@ -144,7 +144,7 @@ function animateBackground() {
       #111111${lounge.opacity.toString(16)})`
   lounge
     .img
-    .setAttribute('src',`images/lounge${lounge.image}.jpg`)
+    .setAttribute('src',`images/lounge${lounge.image}.png`)
 }
 if (window.innerWidth > 1000) animateBackground()
 
