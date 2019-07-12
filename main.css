@@ -17,6 +17,9 @@ h1,h2,h3,h4,h5,h6 {
 a {
   text-decoration: none;
 }
+.background-container {
+  padding-top: 30px;
+}
 .section-name {
   margin-bottom: 60px;
   font-size: 32px;
@@ -31,9 +34,6 @@ a {
   transform: translate(-50%, 0);
   background-color: #1cff00a0;
   width: 140px;
-}
-.background-container {
-  padding-top: 60px;
 }
 header {
   position: fixed;
@@ -81,6 +81,7 @@ header .btn {
   width: 100%;
   height: 100vh;
   position: relative;
+  overflow: hidden;
 }
 .welcome-block .back, .welcome-block .front {
   position: absolute;
@@ -308,6 +309,7 @@ footer {
                        '. d d d d d i i i i i i';
   width: 100%;
   padding-top: 100px;
+  position: relative;
 }
 .bg-gradient {
   background: linear-gradient(-45deg, #111, #222);
@@ -316,27 +318,57 @@ footer {
   background: -moz-linear-gradient(-45deg, #111, #222);
   background: -o-linear-gradient(-45deg, #111, #222);
 }
-.bdr {
-  background: linear-gradient(-45deg, #000c, #111c), url('images/bdr.jpg');
-  background: -webkit-linear-gradient(-45deg, #000c, #111c), url('images/bdr.jpg');
-  background: -ms-linear-gradient(-45deg, #000c, #111c), url('images/bdr.jpg');
-  background: -o-linear-gradient(-45deg, #000c, #111c), url('images/bdr.jpg');
-  background: -moz-linear-gradient(-45deg, #000c, #111c), url('images/bdr.jpg');
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
+.hall .front {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-areas: 'h h h h h h h h h h h h'
+                       '. d d d d d i i i i i i';
+  width: 100%;
+  padding: 60px 20px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(-45deg, #111c, #222c);
+  background: -webkit-linear-gradient(-45deg, #111c, #222c);
+  background: -ms-linear-gradient(-45deg, #111c, #222c);
+  background: -moz-linear-gradient(-45deg, #111c, #222c);
+  background: -o-linear-gradient(-45deg, #111c, #222c);
 }
-.lounge {
-  background: linear-gradient(-45deg, #000c, #111c), url('images/lounge0.jpg');
-  background: -webkit-linear-gradient(-45deg, #000c, #111c), url('images/lounge0.jpg');
-  background: -ms-linear-gradient(-45deg, #000c, #111c), url('images/lounge0.jpg');
-  background: -o-linear-gradient(-45deg, #000c, #111c), url('images/lounge0.jpg');
-  background: -moz-linear-gradient(-45deg, #000c, #111c), url('images/lounge0.jpg');
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  padding-bottom: 80px;
-  padding-top: 40px;
+#price {
+  position: relative;
+}
+#price .front {
+  background: linear-gradient(-45deg, #111c, #222c);
+  background: -webkit-linear-gradient(-45deg, #111c, #222c);
+  background: -ms-linear-gradient(-45deg, #111c, #222c);
+  background: -moz-linear-gradient(-45deg, #111c, #222c);
+  background: -o-linear-gradient(-45deg, #111c, #222c);
+  width: 100%;
+  padding: 60px 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#price .btn-container {
+  padding-bottom: 0;
+}
+.hall .back, #price .back {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.hall .back img, #price .back img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 .lounge h2 {
   padding-bottom: 40px;
@@ -384,7 +416,7 @@ footer {
 .vip-hall {
   grid-template-areas: 'h h h h h h h h h h h h'
                        'i i i i i i . d d d d d';
-  padding-bottom: 100px;
+  padding-bottom: 20px;
 }
 .modal-wrapper {
   position: fixed;

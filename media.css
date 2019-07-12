@@ -86,6 +86,9 @@
     width: 100%;
     margin: 2px;
   }
+  #price .front {
+    padding: 60px 0;
+  }
   .contact-block {
     grid-template-columns: 1fr;
     padding: 10px 5%;
@@ -96,15 +99,21 @@
   .contact {
     grid-template-columns: 20% 80%;
   }
-  .vip-hall, .hall {
+  .vip-hall, .hall, .hall .front {
     display: -webkit-flex;
     display: -ms-flex;
     display: flex;
     flex-direction: column;
     padding-bottom: 0;
   }
+  .hall .front {
+    padding: 60px 20px;
+  }
   .hall img {
     display: none;
+  }
+  .hall .back img {
+    display: block;
   }
   .description {
     margin-left: 24px;

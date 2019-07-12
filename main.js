@@ -111,7 +111,8 @@ window.addEventListener('keydown', e => {
 })
 
 let lounge = {
-  html: document.querySelector('.lounge'),
+  front: document.querySelector('#lounge').childNodes[3],
+  img: document.querySelector('#lounge').childNodes[1].childNodes[1],
   opacity: 204,
   t: 0,
   image: 0,
@@ -137,11 +138,13 @@ function animateBackground() {
     }
   }
   lounge
-    .html
-    .style['background-image'] = `-webkit-linear-gradient(-45deg,
+    .front
+    .style['background'] = `-webkit-linear-gradient(-45deg,
       #000000${lounge.opacity.toString(16)},
-      #111111${lounge.opacity.toString(16)}),
-      url('images/lounge${lounge.image}.jpg')`
+      #111111${lounge.opacity.toString(16)})`
+  lounge
+    .img
+    .setAttribute('src',`images/lounge${lounge.image}.jpg`)
 }
 animateBackground()
 
@@ -190,7 +193,6 @@ function sendData() {
                               &count=${form.html['count'].value}
                               &date=${form.html['date'].value}`, true)
 		x.send()
-
     form.html['name'].value = ''
     form.html['phone'].value = ''
     form.html['count'].value = ''
@@ -201,3 +203,16 @@ function sendData() {
 function clearRed(el) {
   el.style['border-color'] = '#666'
 }
+
+document
+  .querySelectorAll('.fixed')
+  .forEach( block => {
+    block.style['height'] = block.childNodes[3].clientHeight + 'px'
+    if (block.childNodes[3].clientHeight > block.childNodes[3].clientWidth) {
+      block.childNodes[1].childNodes[1].style['height'] = block.childNodes[3].clientHeight + 'px'
+      block.childNodes[1].childNodes[1].style['width'] = 'auto'
+    } else {
+      block.childNodes[1].childNodes[1].style['height'] = 'auto'
+      block.childNodes[1].childNodes[1].style['width'] = block.childNodes[3].clientWidth + 'px'
+    }
+  })
