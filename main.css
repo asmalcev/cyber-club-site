@@ -581,3 +581,10 @@ footer {
 .description .btn-container {
   margin-top: 120px;
 }
+.fullscreen-bg__video {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100vh;
+  transform: translateX(-50%) scale(1.5);
+}
