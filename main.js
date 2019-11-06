@@ -227,22 +227,42 @@ function sendData() {
 function clearRed(el) {
   el.style['border-color'] = '#666'
 }
-/*
 
-Supportive function to control the size of the back part with image
-
-*/
 window.addEventListener('load', _ => {
+  /*
+
+  Supportive function to control the size of the back part with image
+
+  */
   document
     .querySelectorAll('.fixed')
     .forEach( block => {
-      block.style['height'] = block.childNodes[3].clientHeight + 'px'
-      if (block.childNodes[3].clientHeight > block.childNodes[3].clientWidth) {  // changing the size of image to make it cover all place
-        block.childNodes[1].childNodes[1].style['height'] = block.childNodes[3].clientHeight + 'px'
-        block.childNodes[1].childNodes[1].style['width'] = 'auto'
-      } else {
-        block.childNodes[1].childNodes[1].style['height'] = 'auto'
-        block.childNodes[1].childNodes[1].style['width'] = block.childNodes[3].clientWidth + 'px'
+      let background = block.childNodes[1]
+      let frontground = block.childNodes[3]
+      let backgroundImage = block.childNodes[1].childNodes[1]
+      block.style['height'] = frontground.clientHeight + 'px'
+      if (frontground.clientHeight > backgroundImage.height) {
+        backgroundImage.style['height'] = frontground.clientHeight + 'px'
+        backgroundImage.style['width'] = 'auto'
       }
     })
+
+  /*
+
+  checking if connection type less than 4g
+
+  */
+  let back = document.querySelector('.welcome-block.bg-gradient > .back');
+  if (navigator.connection.effectiveType == '4g')
+    back.innerHTML = `<video loop="" muted="" autoplay=""
+                      poster="images/grd.jpg" class="fullscreen-bg__video">
+                        <source src="video/promo.mp4" type="video/mp4">
+                      </video>`;
+  else
+    back.innerHTML = '<img src="images/grd.jpg" alt="background">';
+
+  if (window.innerWidth > window.innerHeight) {
+    document.querySelector('.fullscreen-bg__video').style['height'] = 'auto'
+    document.querySelector('.fullscreen-bg__video').style['width'] = '100vw'
+  }
 })
