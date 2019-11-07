@@ -5,6 +5,7 @@
   box-sizing: border-box;
   font-family: 'Source Sans Pro', sans-serif;
   color: #d6d6d6;
+  font-display: auto;
 }
 body {
   background-color: #2a2a2a;
@@ -586,7 +587,7 @@ footer {
   top: 0;
   left: 50%;
   height: 100vh;
-  transform: translateX(-50%) scale(1.5);
+  transform: translateX(-50%);
 }
 @media (max-width: 1000px) {
   header {

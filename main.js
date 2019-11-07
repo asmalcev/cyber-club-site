@@ -1,7 +1,5 @@
 /*
-
 Menu element controler
-
 */
 let menu = {
   isOpen: false,
@@ -28,9 +26,7 @@ function closeMenu() {
   }
 }
 /*
-
 Achievements animation
-
 */
 let achievements = {
   activeIndex: 0,
@@ -53,9 +49,7 @@ achievements.body.addEventListener('mouseout', _ => {
   achievements.html.forEach(ach => {ach.classList.remove('active')})
 })
 /*
-
 Yandex map code
-
 */
 ymaps.ready(function () {
     let myMap = new ymaps.Map('map', {
@@ -79,9 +73,7 @@ ymaps.ready(function () {
     myMap.geoObjects.add(myPlacemarkWithContent)
 })
 /*
-
 Modal window controler
-
 */
 let modal = {
   html: document.querySelector('.modal-wrapper'),
@@ -126,9 +118,7 @@ window.addEventListener('keydown', e => {
   if (e.keyCode == 27) closeModal()
 })
 /*
-
 Background animation behind Lounge Block
-
 */
 let lounge = {
   front: document.querySelector('#lounge').childNodes[3],
@@ -166,11 +156,8 @@ function animateBackground() {
     .img
     .setAttribute('src',`images/lounge${lounge.image}.png`)
 }
-animateBackground()
 /*
-
 Form validation and sending AJAX request
-
 */
 let form = {
   html: document.querySelector('#modal-form'),
@@ -230,14 +217,11 @@ function clearRed(el) {
 
 window.addEventListener('load', _ => {
   /*
-
   Supportive function to control the size of the back part with image
-
   */
   document
     .querySelectorAll('.fixed')
     .forEach( block => {
-      let background = block.childNodes[1]
       let frontground = block.childNodes[3]
       let backgroundImage = block.childNodes[1].childNodes[1]
       block.style['height'] = frontground.clientHeight + 'px'
@@ -248,9 +232,7 @@ window.addEventListener('load', _ => {
     })
 
   /*
-
-  checking if connection type less than 4g
-
+  Checking if connection type less than 4g
   */
   let back = document.querySelector('.welcome-block.bg-gradient > .back');
   if (navigator.connection.effectiveType == '4g')
@@ -265,4 +247,6 @@ window.addEventListener('load', _ => {
     document.querySelector('.fullscreen-bg__video').style['height'] = 'auto'
     document.querySelector('.fullscreen-bg__video').style['width'] = '100vw'
   }
+
+  animateBackground()
 })
