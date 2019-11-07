@@ -122,7 +122,7 @@ Background animation behind Lounge Block
 */
 let lounge = {
   front: document.querySelector('#lounge').childNodes[3],
-  img: document.querySelector('#lounge').childNodes[1].childNodes[1],
+  back: document.querySelector('#lounge').childNodes[1],
   opacity: 204,
   t: 0,
   image: 0,
@@ -153,8 +153,8 @@ function animateBackground() {
       #000000${lounge.opacity.toString(16)},
       #111111${lounge.opacity.toString(16)})`
   lounge
-    .img
-    .setAttribute('src',`images/lounge${lounge.image}.png`)
+    .back
+    .style['background-image'] = `url(images/lounge${lounge.image}.png)`
 }
 /*
 Form validation and sending AJAX request
@@ -223,12 +223,7 @@ window.addEventListener('load', _ => {
     .querySelectorAll('.fixed')
     .forEach( block => {
       let frontground = block.childNodes[3]
-      let backgroundImage = block.childNodes[1].childNodes[1]
       block.style['height'] = frontground.clientHeight + 'px'
-      if (frontground.clientHeight > backgroundImage.height) {
-        backgroundImage.style['height'] = frontground.clientHeight + 'px'
-        backgroundImage.style['width'] = 'auto'
-      }
     })
 
   /*
