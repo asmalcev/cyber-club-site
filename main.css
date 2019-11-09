@@ -594,6 +594,25 @@ footer {
   background-attachment: fixed;
   background-position: center center;
 }
+.certification {
+  padding-top: 60px;
+  width: 100%;
+  overflow-x: hidden;
+}
+.certification h2 img {
+  height: 100px;
+  vertical-align: middle;
+  padding-bottom: 5px;
+}
+.certification > img {
+  width: 60%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+.video-holder {
+  background-image: url('images/grd.jpg');
+  background-size: cover;
+}
 @media (max-width: 1000px) {
   header {
     height: 100vh;
@@ -735,5 +754,15 @@ footer {
   }
   .lounge {
     padding-bottom: 40px;
+  }
+  .certification h2 img {
+    display: block;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+  .certification > img {
+    width: 100%;
+    margin: 0;
+    transform: none;
   }
 }
