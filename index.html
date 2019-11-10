@@ -1,3 +1,11 @@
+<!-- <?php
+  if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === "off") {
+    $location = 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+    header('HTTP/1.1 301 Moved Permanently');
+    header('Location: ' . $location);
+    exit;
+  }
+?> -->
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -80,9 +88,11 @@
     </div>
   </div>
   <div class="bg-gradient">
-    <div class="certification">
-      <h2>Клуб сертифицирован nvidia<img src="images/nvidia-gf-certified-three-star-logo-rgb-for-screen.png" alt="NVIDIA CERTIFICATION"></h2>
-      <img src="images/hall.jpg" alt="hall">
+    <div class="certification-wrapper">
+      <div class="certification">
+        <h2>Клуб сертифицирован nvidia<img src="images/nvidia-gf-certified-three-star-logo-rgb-for-screen.png" alt="NVIDIA CERTIFICATION"></h2>
+        <img src="images/hall.jpg" alt="hall">
+      </div>
     </div>
     <div class="hall" id="halls">
       <h2 class="section-name">Основной зал</h2>
