@@ -284,7 +284,7 @@ footer {
 .contact a.under:hover::before {
   width: 100%;
 }
-.ymaps-2-1-74-ground-pane {
+.ymaps-2-1-76-ground-pane {
   filter: brightness(.9) invert(100%) grayscale(.3) hue-rotate(260deg);
   -ms-filter: brightness(.9) invert(100%) grayscale(.3) hue-rotate(260deg);
   -webkit-filter: brightness(.9) invert(100%) grayscale(.3) hue-rotate(260deg);
@@ -302,7 +302,7 @@ footer {
   font-size: 17px;
   font-weight: 600;
 }
-.ymaps-2-1-74-hint__text * {
+.ymaps-2-1-76-hint__text * {
   font-size: 14px;
   color: #444;
 }
